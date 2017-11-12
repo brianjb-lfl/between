@@ -5,7 +5,7 @@ import './title.css';
 export default function Title(props) {
   return (
     <div id="title-wrapper">
-      <h3>Component:  Title</h3>
+      <h3>BTS</h3>
     </div>
   );
 };

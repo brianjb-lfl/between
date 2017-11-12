@@ -2,10 +2,19 @@ import React from 'react';
 import {connect} from 'react-redux';
 import './betrow.css';
 
-export default function BetRow (props) {
+export function BetRow (props) {
   return (
     <div id="betrow-wrapper">
-      <h3>Component:  BetRow</h3>
+      <h3>Bet:  {props.bet.toLocaleString('en', {
+        style: 'currency',
+        currency: 'USD'
+      }).slice(0, -3)}</h3>
     </div>
   );
 };
+
+const mapStateToProps = state => ({
+  bet: state.bet
+});
+
+export default connect(mapStateToProps)(BetRow);
